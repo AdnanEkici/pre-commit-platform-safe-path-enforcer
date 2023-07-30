@@ -26,7 +26,7 @@ By checking for hard-coded path separators at commit time, this pre-commit hook 
         - id: pre-commit-platform-safe-path-enforcer
           name: 'Check Path Separator'
           entry: python hooks/check_paths.py
-          language: system
+          language: script
           types: [python]
     ```
 
