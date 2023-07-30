@@ -1,5 +1,9 @@
-repos:
-  - repo: https://github.com/AdnanEkici/pre-commit-platform-safe-path-enforcer
-    rev: v0.0.1
-    hooks:
-      - id: pre-commit-platform-safe-path-enforcer
+ repos:
+    - repo: https://github.com/AdnanEkici/pre-commit-platform-safe-path-enforcer
+      rev: v0.0.1
+      hooks:
+        - id: pre-commit-platform-safe-path-enforcer
+          name: 'Check Path Separator'
+          entry: python hooks/check_paths.py
+          language: system
+          types: [python]
