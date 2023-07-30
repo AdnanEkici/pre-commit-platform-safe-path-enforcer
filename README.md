@@ -19,15 +19,15 @@ By checking for hard-coded path separators at commit time, this pre-commit hook 
 2. Add the following to your `.pre-commit-config.yaml` file:
 
     ```yaml
-     repos:
-        - repo: https://github.com/AdnanEkici/pre-commit-platform-safe-path-enforcer
-          rev: v0.0.1
-          hooks:
-            - id: pre-commit-platform-safe-path-enforcer
-              name: 'Check Path Separator'
-              entry: hooks/check_paths.py
-              language: script
-              types: [python]
+    repos:
+      - repo: https://github.com/AdnanEkici/pre-commit-platform-safe-path-enforcer
+        rev: v0.0.1
+        hooks:
+        - id: pre-commit-platform-safe-path-enforcer
+          name: 'Check Path Separator'
+          entry: hooks/check_paths.py
+          language: script
+          types: [ python ]
     ```
 
 3. Run pre-commit:
