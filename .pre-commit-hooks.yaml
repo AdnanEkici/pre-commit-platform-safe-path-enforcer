@@ -1,0 +1,7 @@
+# .pre-commit-hooks.yaml
+- id: pre-commit-platform-safe-path-enforcer
+  name: 'Check Path Separator'
+  description: 'This hook checks if the code uses hard-coded path separators.'
+  entry: hooks/check_paths.py
+  language: script
+  types: [python]

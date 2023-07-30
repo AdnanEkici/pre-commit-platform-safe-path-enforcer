@@ -1,0 +1,5 @@
+repos:
+  - repo: https://github.com/AdnanEkici/pre-commit-platform-safe-path-enforcer
+    rev: v0.0.1
+    hooks:
+      - id: pre-commit-platform-safe-path-enforcer
