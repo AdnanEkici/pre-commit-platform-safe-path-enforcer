@@ -7,3 +7,4 @@ repos:
           entry: hooks/check_paths.py
           language: script
           types: [ python ]
+
