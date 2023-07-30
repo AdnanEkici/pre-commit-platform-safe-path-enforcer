@@ -12,29 +12,28 @@ By checking for hard-coded path separators at commit time, this pre-commit hook 
 
 1. First, ensure that you have pre-commit installed. If not, you can install it using pip:
 
-    ```bash
-    pip install pre-commit
-    ```
+```bash
+pip install pre-commit
+```
 
 2. Add the following to your `.pre-commit-config.yaml` file:
 
-    ```yaml
-    repos:
-      - repo: https://github.com/AdnanEkici/pre-commit-platform-safe-path-enforcer
-        rev: v0.0.1
-        hooks:
+```yaml
+  - repo: https://github.com/AdnanEkici/pre-commit-platform-safe-path-enforcer
+    rev: v0.0.1
+    hooks:
         - id: pre-commit-platform-safe-path-enforcer
           name: 'Check Path Separator'
           entry: hooks/check_paths.py
           language: script
           types: [ python ]
-    ```
+```
 
 3. Run pre-commit:
 
-    ```bash
-    pre-commit run --all-files
-    ```
+```bash
+pre-commit run --all-files
+```
 
 If the hook finds any hard-coded path separators in your Python files, it will output a message and fail, preventing the commit. You can then fix the issue before retrying the commit.
 
@@ -70,10 +69,12 @@ In the next version (0.0.2) of my Pre-commit Safe Path Enforcer hook, I am plann
 
 - **Customization options**: I am planning to introduce more customization options so that users can better tailor the tool to their needs.
 
-- **Unit Tests**: - **Unit Tests**: I understand the importance of reliability in a tool like ours. 
+- **Unit Tests**: - **Unit Tests**: I understand the importance of reliability in a tool like ours.
   That's why I have introduced unit tests to ensure the integrity of our code. 
   With the upcoming 0.0.2 version, Check Path Separator pre-commit hook becomes more reliable with comprehensive unit tests designed to cover a wide range of scenarios and edge cases. 
   These tests help us to prevent regressions, ensure the quality of our work, and move towards updates and improvements with confidence. 
   They make our hook more robust and dependable, providing users with the reassurance that the tool will perform consistently.
+
+- **Fix**: Currently hook detects URL's. It will be fixed. 
 
 Stay tuned for these updates!
