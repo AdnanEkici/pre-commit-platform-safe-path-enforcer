@@ -21,11 +21,9 @@ class TestPathSeperatorHook(unittest.TestCase):
         ("test_simple_string_with_new_line", "This is a string with new line \n ", 0),# noqa
     ])
 
-    #os.sep +
-
 
     path_10 = ""
-    test_directory_path = os.path.join("tmp" , "path_seperator_test_environment")
+    test_directory_path = os.path.join(os.sep + "tmp" , "path_seperator_test_environment")
     test_file = test_directory_path + os.sep + "path_test_python_file.py"
 
     def setUp(self) -> None:
@@ -33,9 +31,9 @@ class TestPathSeperatorHook(unittest.TestCase):
             shutil.rmtree(self.test_directory_path)
         os.makedirs(self.test_directory_path, exist_ok=False)
 
-    # def tearDown(self) -> None:
-    #     if os.path.exists(self.test_directory_path):
-    #         shutil.rmtree(self.test_directory_path)
+    def tearDown(self) -> None:
+        if os.path.exists(self.test_directory_path):
+            shutil.rmtree(self.test_directory_path)
 
     def create_test_python_file(self, variable_value:str):
         file_content = f"test_variable = {repr(variable_value)}\n"
