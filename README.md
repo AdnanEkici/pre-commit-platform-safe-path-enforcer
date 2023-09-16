@@ -20,7 +20,7 @@ pip install pre-commit
 
 ```yaml
   - repo: https://github.com/AdnanEkici/pre-commit-platform-safe-path-enforcer
-    rev: v0.0.1
+    rev: v0.0.2
     hooks:
         - id: pre-commit-platform-safe-path-enforcer
           name: 'Check Path Separator'
@@ -57,9 +57,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Upcoming Features
 
-In the next version (0.0.2) of my Pre-commit Safe Path Enforcer hook, I am planning to introduce the following features and improvements:
-
-- **Enhanced detection**: I aim to improve the accuracy of path detection to further minimize false positives.
+In the next version (0.0.3) of my Pre-commit Safe Path Enforcer hook, I am planning to introduce the following features and improvements:
 
 - **Performance optimization**: I will be optimizing the script to reduce the overall time it takes to check larger codebases.
 
@@ -68,12 +66,6 @@ In the next version (0.0.2) of my Pre-commit Safe Path Enforcer hook, I am plann
 - **Exclude List Improvement**: I am working on making the `exclude` feature more intuitive and robust, making it easier to specify files or folders that you want the hook to skip.
 
 - **Customization options**: I am planning to introduce more customization options so that users can better tailor the tool to their needs.
-
-- **Unit Tests**: - **Unit Tests**: I understand the importance of reliability in a tool like ours.
-  That's why I have introduced unit tests to ensure the integrity of our code. 
-  With the upcoming 0.0.2 version, Check Path Separator pre-commit hook becomes more reliable with comprehensive unit tests designed to cover a wide range of scenarios and edge cases. 
-  These tests help us to prevent regressions, ensure the quality of our work, and move towards updates and improvements with confidence. 
-  They make our hook more robust and dependable, providing users with the reassurance that the tool will perform consistently.
 
 - **Fix**: Currently hook detects URL's. It will be fixed. 
 
